@@ -43,10 +43,15 @@ open .build/LumaRecall.app
 
 ## 화면 호환성
 
-| 화면 | 밝기를 바꾸는 방식 |
-| --- | --- |
-| 내장 디스플레이 | 지원되는 경우 macOS DisplayServices로 백라이트를 조절합니다. 이 비공개 인터페이스는 macOS 버전에 따라 달라질 수 있습니다. |
-| 외장 모니터 | CoreGraphics 감마 테이블로 화면 출력을 어둡게 합니다. 슬라이더의 %는 소프트웨어 배율이며 모니터 자체의 백라이트 설정은 유지됩니다. |
+<table>
+  <thead>
+    <tr><th width="160" align="left">화면</th><th align="left">밝기를 바꾸는 방식</th></tr>
+  </thead>
+  <tbody>
+    <tr><td nowrap>내장 디스플레이</td><td>지원되는 Mac에서는 DisplayServices로 백라이트를 조절합니다. 이 비공개 인터페이스는 macOS 버전에 따라 달라질 수 있습니다.</td></tr>
+    <tr><td nowrap>외장 모니터</td><td>CoreGraphics 감마 테이블로 화면 출력을 어둡게 합니다. 슬라이더의 %는 소프트웨어 배율이며, 모니터 자체의 백라이트 설정은 유지됩니다.</td></tr>
+  </tbody>
+</table>
 
 실기기 확인 환경은 **Intel Mac · macOS 15.7.9 · 내장 화면 1대와 외장 모니터 2대**입니다. 외장 출력은 감마 테이블 읽기와 쓰기를 지원해야 하며, 색상 프로필이나 다른 밝기 앱의 변경에 영향을 받을 수 있습니다.
 
